@@ -3,7 +3,7 @@ import { persistReducer  } from 'redux-persist';
 import localForage from 'localforage';
 
 import screenReducer from './reducers/screenReducer';
-import {userReducer} from './reducers/userReducer'
+import userReducer from './reducers/userReducer.js'
 const rootPersistConfig = {
     version: 0,
     key: 'keyDb',

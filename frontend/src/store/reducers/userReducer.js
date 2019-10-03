@@ -3,7 +3,6 @@ import {
 	USER_REGISTER_FAILURE
 } from '../actions/userActions';
 
-
 const userReducer = (state = {}, action) => {
 	switch(action.type) {
 		case USER_REGISTER_SUCCESS : 
@@ -16,6 +15,8 @@ const userReducer = (state = {}, action) => {
 				...state,
 				error: action.error
 			}
+		default:
+            return state
 	}
 }
-export default  userReducer;
+export default userReducer;
