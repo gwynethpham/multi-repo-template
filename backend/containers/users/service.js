@@ -5,7 +5,7 @@ const db = require('../../db/db');
 const User = db.User;
 
 module.exports = {
-    // authenticate,
+    authenticate,
     getAll,
     getById,
     create,
@@ -13,17 +13,17 @@ module.exports = {
     delete: _delete
 };
 
-// async function authenticate({ username, password }) {
-//     const user = await User.findOne({ username });
-//     if (user && bcrypt.compareSync(password, user.hash)) {
-//         const { hash, ...userWithoutHash } = user.toObject();
-//         const token = jwt.sign({ sub: user.id }, config.secret);
-//         return {
-//             ...userWithoutHash,
-//             token
-//         };
-//     }
-// }
+async function authenticate({ email , password }) {
+    const user = await User.findOne({ email });
+    if (user && bcrypt.compareSync(password, user.hash)) {
+        const { hash, ...userWithoutHash } = user.toObject();
+        const token = jwt.sign({ sub: user.id }, config.secret);
+        return {
+            ...userWithoutHash,
+            token
+        };
+    }
+}
 
 async function getAll() {
     return await User.find().select('-hash');
@@ -33,22 +33,12 @@ async function getById(id) {
     return await User.findById(id).select('-hash');
 }
 
-async function create(userParam) {
-    console.log('userparam',userParam )
-    // validate
-    if (await User.findOne({ username: userParam.username })) {
-        throw 'Username "' + userParam.username + '" is already taken';
-    }
-
-    const user = new User(userParam);
-
-    // hash password
-    if (userParam.password) {
-        user.hash = bcrypt.hashSync(userParam.password, 10);
-    }
-
-    // save user
-    await user.save();
+async function create({firstName, lastName, email, password}) {
+    // console.log('{firstName, lastName, email, password}',{firstName, lastName, email, password})
+    if (await User.findOne({ email }))  throw 'email "' + email + '" is already taken';
+    const user = await User.create({firstName, lastName, email, hash : bcrypt.hashSync(password, 10)});
+    console.log('user',user)
+    return getAll();
 }
 
 async function update(id, userParam) {
