@@ -5,9 +5,9 @@ import  {screenActions} from '../../store/actions/screenActions.js'
 import  {userActions} from '../../store/actions/userActions.js';
 import { Button } from "native-base";
 
-Login.navigationOptions = {
-	title: 'Please sign in'
-}
+// Login.navigationOptions = {
+// 	title: 'Please sign in'
+// }
 
 function Login(props) {
 	  const [username, setUserName] =useState('');
@@ -66,10 +66,15 @@ function Login(props) {
         <TextInput style={styles.textInput} placeholder="Your name" maxLength={20} value={username} onChangeText={(e)=> setUserName(e)} />
 	     {/*<TextInput style={styles.textInput} placeholder="Email ID" onChangeText={validate} value={email} />*/}
 	    <TextInput secureTextEntry={true}  style={styles.textInput}  placeholder="password" maxLength={20} value={password} onChangeText={(e)=> setPassword(e)} />
-	    <Button full rounded primary style={{ marginTop: 10 }} onPress={_signInAsync}>
-            <Text style={{color : 'white', fontWeight: 'bold'}}>Sign in</Text>
-        </Button>
-	    {props.screens['showPopup'] && <Text style={{color:'red'}}> Pham Minh Tan</Text>}
+	    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+	    	 <Button full rounded primary style={{ marginTop: 10, width: 100 }} onPress={_signInAsync}>
+	            <Text style={{color : 'white', fontWeight: 'bold'}}>Sign in</Text>
+	        </Button>
+	         <Button full rounded primary style={{ marginTop: 10, width: 100 }} onPress={()=>props.navigation.navigate('Register')}>
+	            <Text style={{color : 'white', fontWeight: 'bold'}}>Register</Text>
+	        </Button>
+	    </View>
+	   
       </View>
     );
 }

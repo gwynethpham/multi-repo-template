@@ -29,8 +29,6 @@ export default class IScrolled extends Component {
           <Text> 
             Detail screen
           </Text>
-          
-
           <Text style={{fontSize:12}}>Scroll me plz</Text>
           <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />
           <Image source={{uri: "https://facebook.github.io/react-native/img/tiny_logo.png", width: 64, height: 64}} />

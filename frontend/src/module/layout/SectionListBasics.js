@@ -4,7 +4,7 @@ import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 
 import { SectionList, StyleSheet, Text, View, Button,TouchableOpacity } from 'react-native';
-import FadeInView from './FadeInView.js'
+// import FadeInView from './FadeInView.js'
 
 class SectionListABC extends Component {
   constructor(props) {
@@ -35,9 +35,6 @@ class SectionListABC extends Component {
         <Button title="Go to FadIN"
         onPrees={()=>this.props.navigation.navigate('FadeInView')}
         />
-
-       
-
         <View
             accessible={true}
             accessibilityActions={[
@@ -66,7 +63,7 @@ class SectionListABC extends Component {
 
 const MainNavigation = createStackNavigator({
   SectionListABC : {screen : SectionListABC},
-  FadeInView : {screen : FadeInView}
+  // FadeInView : {screen : FadeInView}
 })
 
 const SectionListBasics = createAppContainer(MainNavigation);

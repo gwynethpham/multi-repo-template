@@ -4,8 +4,11 @@ import { Ionicons } from '@expo/vector-icons'; // 6.2.2
 import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import AppNavigator from '../../index.js'
+import HomeScreenRouter from './Home.js'
 
-const HomeDefault = createAppContainer(AppNavigator);
+
+const HomeDefault= createAppContainer(HomeScreenRouter);
+const Settings = createAppContainer(AppNavigator);
 class HomeScreen extends React.Component {
   render() {
     return (
@@ -17,9 +20,7 @@ class HomeScreen extends React.Component {
 class SettingsScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Settings!</Text>
-      </View>
+      <Settings />
     );
   }
 }
