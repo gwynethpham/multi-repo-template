@@ -4,8 +4,11 @@ mongoose.set('useCreateIndex', true);
 
 const dbURI = config.connectHost;
 try {
-    mongoose.connect(dbURI, {
-        useNewUrlParser: true
+   mongoose.connect(dbURI, {
+       useNewUrlParser: true,
+       useCreateIndex: true,
+       useFindAndModify: false,
+       useUnifiedTopology: true
     })
 } catch (error) { }
 

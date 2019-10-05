@@ -1,13 +1,36 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, TextInput, Text } from 'react-native';
+import { View, StyleSheet, TextInput, Text,Image } from 'react-native';
 import { connect } from 'react-redux'
 import  {screenActions} from '../../store/actions/screenActions.js'
 import  {userActions} from '../../store/actions/userActions.js';
 import { Button } from "native-base";
 
-// Login.navigationOptions = {
-// 	title: 'Please sign in'
-// }
+class LogoTitle extends React.Component {
+  render() {
+    return (
+      <Image
+        source={require('../../../assets/images/alert-firework.png')}
+        style={{ width: 40, height: 40, position: 'absolute', left : -50}}
+      />
+    );
+  }
+}
+
+Login.navigationOptions =({ navigation, navigationOptions }) => {
+	// const {params} = navigation.state;
+	return{
+		headerTitle : <LogoTitle />,
+		// headerRight : (
+		// 	<Button onPress={navigation.getParam('increaseCount')}
+		// 	title = "+1"
+		// 	color = "red" />
+		// ),
+		headerStyle: {
+  			backgroundColor: navigationOptions.headerTintColor,
+		},
+  		headerTintColor: navigationOptions.headerStyle.backgroundColor,
+	}
+}
 
 function Login(props) {
 	  const [username, setUserName] =useState('');
@@ -18,7 +41,7 @@ function Login(props) {
 	  const styles = StyleSheet.create({
 	    container: {
 	      justifyContent: 'center',
-	      marginTop: 50,
+	      // marginTop: 50,
 	      padding: 20,
 	      backgroundColor: '#ffffff',
 	    },

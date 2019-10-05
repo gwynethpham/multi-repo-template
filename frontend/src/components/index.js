@@ -4,7 +4,7 @@ import { ActivityIndicator, AsyncStorage, StatusBar, StyleSheet, View } from 're
 import { createStackNavigator } from 'react-navigation-stack';
 import TabButtonNavigator from '../module/layout/TabButtonNavigator.js';
 import Login from './SignIn/Login';
-import Register from './SignIn/Login'
+import Register from './SignIn/Register'
 
 // class AuthLoadingScreen extends React.Component {
 //   componentDidMount() {
@@ -33,7 +33,19 @@ import Register from './SignIn/Login'
 const AuthStack = createStackNavigator(
 	{ 
 		Login: Login,
-		Register : Register 
+		Register : Register, 
+	},
+	{
+		initialRouteName : 'Login',
+		defaultNavigationOptions: {
+	      headerStyle: {
+	        backgroundColor: '#f4511e',
+	      },
+	      headerTintColor: '#fff',
+	      headerTitleStyle: {
+	        fontWeight: 'bold',
+	      },
+	    },
 	}
 );
 const SwitchNavigator =  createSwitchNavigator(

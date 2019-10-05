@@ -19,8 +19,8 @@ function register(data) {
     return dispatch => {
       userService.register(data) 
       .then(
-        user=>{ return { type: USER_REGISTER_SUCCESS, user} }, 
-        error => {return {type: USER_REGISTER_FAILURE, error} }
+        user=> dispatch({ type: USER_REGISTER_SUCCESS, user}) ,
+        error =>  dispatch({type: USER_REGISTER_FAILURE, error})
         ) 
     }
 }

@@ -5,7 +5,8 @@ import {
 
 const userReducer = (state = {}, action) => {
 	switch(action.type) {
-		case USER_REGISTER_SUCCESS : 
+		case USER_REGISTER_SUCCESS :
+			console.log('action',action.user)
 			return {
 				...state,
 				user : action.user
