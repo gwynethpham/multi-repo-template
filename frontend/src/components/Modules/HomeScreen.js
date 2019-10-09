@@ -1,9 +1,12 @@
 import React, {Component} from "react";
-import { StatusBar } from "react-native";
+import {Alert, Modal, TouchableHighlight, View} from "react-native";
 import { Button, Text, Container, Card, CardItem, Body, Content, Header, Title, Left, Icon, Right } from "native-base";
 import { DrawerActions } from 'react-navigation-drawer';
 
 export default class HomeScreen extends Component {
+    state ={
+        modalVisible : false
+    }
     render() {
         return (
             <Container>
@@ -14,9 +17,15 @@ export default class HomeScreen extends Component {
                         </Button>
                     </Left>
                     <Body>
-                        <Title>HomeScreen</Title>
+                        <Button transparent onPress={()=> this.props.navigation.navigate('Home')} >
+                            <Title>HomeScreen</Title>
+                        </Button>
                     </Body>
-                    <Right />
+                    <Right>
+                        <Button transparent onPress={() => this.setState({modalVisible : true})} >
+                            <Icon name="chatboxes" />
+                        </Button>
+                    </Right>
                 </Header>
                 <Content padder>
                     <Card>
@@ -32,6 +41,19 @@ export default class HomeScreen extends Component {
                     <Button full rounded primary style={{ marginTop: 10 }} onPress={() => this.props.navigation.navigate("ProfileScreen")} >
                         <Text>Goto Profiles</Text>
                     </Button>
+
+                    <Modal animationType="slide" transparent={false} visible={this.state.modalVisible}
+                           onRequestClose={() => {
+                               Alert.alert('Modal has been closed.');
+                           }}>
+                        <View style={{marginTop: 22, backgroundColor : 'red'}}>
+                            <Text>Hello World!</Text>
+                            <TouchableHighlight onPress={() => this.setState({modalVisible : !this.state.modalVisible})}>
+                                <Text>Hide Modal</Text>
+                            </TouchableHighlight>
+                        </View>
+                    </Modal>
+
                 </Content>
             </Container>
         );

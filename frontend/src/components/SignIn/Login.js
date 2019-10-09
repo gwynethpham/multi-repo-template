@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, TextInput, Text,Image } from 'react-native';
+import { View, StyleSheet, TextInput, Text,Image ,ImageBackground  } from 'react-native';
 import { connect } from 'react-redux'
 import  {screenActions} from '../../store/actions/screenActions.js'
 import  {userActions} from '../../store/actions/userActions.js';
@@ -41,7 +41,7 @@ function Login(props) {
 	    container: {
 	      justifyContent: 'center',
 	      // marginTop: 50,
-	      padding: 20,
+	      // padding: 20,
 	      backgroundColor: '#ffffff',
 	    },
 	    textInput : {
@@ -71,19 +71,20 @@ function Login(props) {
 	 };
  
     return (
-      <View style={styles.container}>
-        <TextInput style={styles.textInput} placeholder="Email" maxLength={20} value={email} onChangeText={(e)=> setEmail(e)} />
-	    <TextInput secureTextEntry={true}  style={styles.textInput}  placeholder="password" maxLength={20} value={password} onChangeText={(e)=> setPassword(e)} />
-	    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-	    	 <Button full rounded primary style={{ marginTop: 10, width: 100 }} onPress={_signInAsync}>
-	            <Text style={{color : 'white', fontWeight: 'bold'}}>Sign in</Text>
-	        </Button>
-	         <Button full rounded primary style={{ marginTop: 10, width: 100 }} onPress={()=>props.navigation.navigate('Register')}>
-	            <Text style={{color : 'white', fontWeight: 'bold'}}>Register</Text>
-	        </Button>
-	    </View>
-	   
-      </View>
+    	 <View style={styles.container}>
+	    	 <ImageBackground source={require('../../../assets/images/bg.png')} style={{width: '100%', height: '100%'}}>
+			        <TextInput style={styles.textInput} placeholder="Email" maxLength={20} value={email} onChangeText={(e)=> setEmail(e)} />
+				    <TextInput secureTextEntry={true}  style={styles.textInput}  placeholder="password" maxLength={20} value={password} onChangeText={(e)=> setPassword(e)} />
+				    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+				    	 <Button full rounded primary style={{ marginTop: 10, width: 100 }} onPress={_signInAsync}>
+				            <Text style={{color : 'white', fontWeight: 'bold'}}>Sign in</Text>
+				        </Button>
+				         <Button full rounded primary style={{ marginTop: 10, width: 100 }} onPress={()=>props.navigation.navigate('Register')}>
+				            <Text style={{color : 'white', fontWeight: 'bold'}}>Register</Text>
+				        </Button>
+				    </View>     
+	        </ImageBackground>
+         </View>
     );
 }
 const mapStateToProps = (state) => {

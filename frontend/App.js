@@ -4,7 +4,6 @@ import { Provider } from 'react-redux'
 import { persistor, store } from './src/helpers/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import { CookiesProvider } from 'react-cookie';
-import Login from './src/module/layout/Login.js';
 // import AppNavigator from './src/index.js';
 import { createAppContainer } from 'react-navigation';
 // import TabButtonNavigator from './src/module/layout/TabButtonNavigator.js'

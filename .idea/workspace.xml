@@ -2,24 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbdd2bfa-177b-4242-97bb-fde17796dd5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Modules/ChatScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Modules/HomeScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Modules/ProfileScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Modules/SideBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/TabButtonNavigator/AppNavigator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/TabButtonNavigator/HomeScreenRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/TabButtonNavigator/TabButtonNavigator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/containers/users/service.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/containers/users/service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Modules/ChatScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Modules/ChatScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Modules/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Modules/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Modules/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Modules/SideBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/SignIn/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SignIn/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/helpers/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/helpers/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/module/layout/TabButtonNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/module/layout/TabButtonNavigator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/actions/userActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/reducers/userReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/reducers/userReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/services/userService.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/services/userService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/module/layout/ChatScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/module/layout/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/module/layout/HomeScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/module/layout/Login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/module/layout/ProfileScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/module/layout/SideBar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/module/layout/TabButtonNavigator.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +76,7 @@
       <workItem from="1569985079179" duration="7384000" />
       <workItem from="1570184515114" duration="2489000" />
       <workItem from="1570241412717" duration="6814000" />
-      <workItem from="1570591106562" duration="2545000" />
+      <workItem from="1570591106562" duration="11718000" />
     </task>
     <servers />
   </component>
