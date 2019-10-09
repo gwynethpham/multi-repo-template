@@ -1,10 +1,10 @@
-import {apiLand} from '../../helpers/config.js'
+import {apiLand} from '../../helpers/config.js';
+import {authHeader} from '../../helpers/authHeader'
 export const userService = {
-    register
+    register,login,getAll
 };
 
 export function register(data) {
-    console.log('data----',data)
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -12,6 +12,33 @@ export function register(data) {
     };
 
     return fetch(`${apiLand}/users/register`, requestOptions).then(handleResponse).catch(err => handleResponseError(err));
+}
+export function login(data) {
+    const requestOptions = {
+        method : 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    }
+    return fetch(`${apiLand}/users/authenticate`, requestOptions)
+    .then(handleResponse)
+    .then(user => {
+        if (typeof user.token !== 'undefined' && (user.token) && (user.token) !== '') {
+            localStorage.setItem('token', user.token);
+        }
+        return user;
+    })
+    .catch(err => handleResponseError(err));
+}
+
+export function getAll() {
+    const requestOptions = {
+        method : 'POST',
+        headers : authHeader()
+    }
+    return fetch(`${apiLand}/users/getall`,requestOptions).then(handleResponse).catch(err=>handleResponseError(err))
+}
+export function logout() {
+    localStorage.removeItem('user');
 }
 
 export function handleResponse(response)
@@ -26,6 +53,7 @@ export function handleResponse(response)
             const error = (data && data.message) || response.statusText;
             return Promise.reject(error);
         }
+       
         return data;
     });
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { ActivityIndicator, AsyncStorage, StatusBar, StyleSheet, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
-import TabButtonNavigator from '../module/layout/TabButtonNavigator.js';
+import TabButtonNavigator from './TabButtonNavigator/TabButtonNavigator';
 import Login from './SignIn/Login';
 import Register from './SignIn/Register'
 

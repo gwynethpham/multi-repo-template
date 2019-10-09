@@ -6,7 +6,7 @@ const User = db.User;
 const ObjectId = require('mongoose').Types.ObjectId;
 
 module.exports = {
-    // authenticate,
+    authenticate,
     getAll,
     // getById,
     create,
@@ -14,17 +14,23 @@ module.exports = {
     // delete: _delete
 };
 
-// async function authenticate({ email , password }) {
-//     const user = await User.findOne({ email });
-//     if (user && bcrypt.compareSync(password, user.hash)) {
-//         const { hash, ...userWithoutHash } = user.toObject();
-//         const token = jwt.sign({ sub: user.id }, config.secret);
-//         return {
-//             ...userWithoutHash,
-//             token
-//         };
-//     }
-// }
+async function authenticate({ email , password }) {
+  try{
+    const user = await User.findOne({ email });
+    if (user && bcrypt.compareSync(password, user.hash)) {
+        const { hash, ...userWithoutHash } = user.toObject();
+        const token = jwt.sign({ sub: user.id }, config.secret);
+        return {
+            ...userWithoutHash,
+            token
+        };
+    }
+  }
+  catch(err){
+    console.log('error', err)
+  }
+    
+}
 
 async function getAll() {
     return await User.find().select('-hash');
@@ -36,7 +42,7 @@ async function getAll() {
 
 async function create({firstName, lastName, email, password}) {
   try{
-      if (await User.findOne({email}))  throw 'id "' + email + '" is already taken';
+      if (await User.findOne({email}))  throw 'email "' + email + '" is already taken';
       const hash = bcrypt.hashSync(password, 10);
       const user = await User.create({
           firstName : firstName,

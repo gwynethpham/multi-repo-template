@@ -33,11 +33,10 @@ Login.navigationOptions =({ navigation, navigationOptions }) => {
 }
 
 function Login(props) {
-	  const [username, setUserName] =useState('');
+	  // const [username, setUserName] =useState('');
 	  const [password, setPassword] =useState('');
 	  const [email, setEmail] =useState('');
 
-	  // const [toggle, setToggle] = useState(false);
 	  const styles = StyleSheet.create({
 	    container: {
 	      justifyContent: 'center',
@@ -58,36 +57,22 @@ function Login(props) {
 	    	marginTop: 10
 	    }
 	  });
-	  const _onHandleSubmit = () => {
-	  	 const data = { username, password};
-	  	 props.onHandleRegister(data);
-	  	 // props.addPopup({name : 'showPopup'});
-	  	 
-	  	 setUserName('');
-	  	 setEmail('');
-	  	 setPassword('');
-	  }
-	  const validate = (text) => {
-		let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ ;
-		if(reg.test(text) === false)
-		{
-			setEmail(text)
-			return false;
-		}
-		else {
-		  setEmail(text);
-		}
-	  }
+
 	const _signInAsync = async () => {
 	    // await AsyncStorage.setItem('userToken', 'abc');
-	    if(username && password) props.navigation.navigate('HomeLayout');
+	    if(email && password) {
+	    	const data = { email, password};
+	  	 	props.onHandleCheckLogin(data);
+	  	 	setEmail('');
+	  	 	setPassword('');
+	    	props.navigation.navigate('HomeLayout');
+	    }
 	    else alert('Please! Your enter userName or password')
 	 };
  
     return (
       <View style={styles.container}>
-        <TextInput style={styles.textInput} placeholder="Your name" maxLength={20} value={username} onChangeText={(e)=> setUserName(e)} />
-	     {/*<TextInput style={styles.textInput} placeholder="Email ID" onChangeText={validate} value={email} />*/}
+        <TextInput style={styles.textInput} placeholder="Email" maxLength={20} value={email} onChangeText={(e)=> setEmail(e)} />
 	    <TextInput secureTextEntry={true}  style={styles.textInput}  placeholder="password" maxLength={20} value={password} onChangeText={(e)=> setPassword(e)} />
 	    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
 	    	 <Button full rounded primary style={{ marginTop: 10, width: 100 }} onPress={_signInAsync}>
@@ -109,7 +94,7 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => ({
     addPopup: (screen) => dispatch(screenActions.addPopup(screen)),
-    onHandleRegister : (data) => dispatch(userActions.register(data))
+    onHandleCheckLogin : (data) => dispatch(userActions.login(data))
 });
 export default connect(mapStateToProps,mapDispatchToProps)(Login);
 

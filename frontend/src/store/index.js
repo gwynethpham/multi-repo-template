@@ -2,8 +2,9 @@ import { combineReducers } from 'redux';
 import { persistReducer  } from 'redux-persist';
 import localForage from 'localforage';
 
-import screenReducer from './reducers/screenReducer';
-import userReducer from './reducers/userReducer.js'
+import screenReducer from './reducers/screenReducer';authenticationReducer
+import userReducer from './reducers/userReducer';
+import authenticationReducer from './reducers/authenticationReducer'
 const rootPersistConfig = {
     version: 0,
     key: 'keyDb',
@@ -13,7 +14,8 @@ const rootPersistConfig = {
 
 const rootReducer = combineReducers({
     screens: screenReducer,
-    user : userReducer
+    user : userReducer,
+    auth : authenticationReducer
 });
 
 export default persistReducer(rootPersistConfig, rootReducer);

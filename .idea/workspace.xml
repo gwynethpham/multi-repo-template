@@ -2,21 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbdd2bfa-177b-4242-97bb-fde17796dd5d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Modules/ChatScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Modules/HomeScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Modules/ProfileScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Modules/SideBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/TabButtonNavigator/AppNavigator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/TabButtonNavigator/HomeScreenRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/TabButtonNavigator/TabButtonNavigator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/containers/users/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/containers/users/controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/containers/users/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/containers/users/model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/containers/users/service.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/containers/users/service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/db/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/db/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/SignIn/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SignIn/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SignIn/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SignIn/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SignIn/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/helpers/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/helpers/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/module/layout/TabButtonNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/module/layout/TabButtonNavigator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/store/actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/actions/userActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/store/reducers/userReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/reducers/userReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/services/userService.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/services/userService.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,10 +37,12 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1Rd7NUJy3Rl5vfMoMcgfGsQagcl" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/components/TabButtonNavigator" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -45,6 +50,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\MyAppNative\frontend\src\components\TabButtonNavigator" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -71,6 +81,7 @@
       <workItem from="1569985079179" duration="7384000" />
       <workItem from="1570184515114" duration="2489000" />
       <workItem from="1570241412717" duration="6814000" />
+      <workItem from="1570591106562" duration="2545000" />
     </task>
     <servers />
   </component>
@@ -96,7 +107,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/backend/containers/users/model.js</url>
           <line>5</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
