@@ -21,12 +21,12 @@ export function login(data) {
     }
     return fetch(`${apiLand}/users/authenticate`, requestOptions)
     .then(handleResponse)
-    .then(user => {
-        if (typeof user.token !== 'undefined' && (user.token) && (user.token) !== '') {
-            localStorage.setItem('token', user.token);
-        }
-        return user;
-    })
+    // .then(user => {
+    //     if (typeof user.token !== 'undefined' && (user.token) && (user.token) !== '') {
+    //         localStorage.setItem('token', user.token);
+    //     }
+    //     return user;
+    // })
     .catch(err => handleResponseError(err));
 }
 

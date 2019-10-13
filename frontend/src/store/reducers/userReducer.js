@@ -6,16 +6,18 @@ import {
 	GET_ALL_USER_FAILURE,
 } from '../actions/userActions';
 
-const userReducer = (state = {}, action) => {
+const userReducer = (state = {login: false, user : {}}, action) => {
 	switch(action.type) {
 		case USER_REGISTER_SUCCESS :
 			return {
 				...state,
+				login: true,
 				user : action.user
 			}
 		case USER_REGISTER_FAILURE : 
 			return {
 				...state,
+				login: false,
 				error: action.error
 			}
 		default:

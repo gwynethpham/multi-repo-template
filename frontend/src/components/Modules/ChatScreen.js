@@ -33,6 +33,7 @@ export default class MainScreenNavigator extends Component {
                     </Right>
                 </Header>
                 <Content padder>
+                    <Text> Chat</Text>
                     <View style={{marginTop: 22 , alignItems : 'center', alignContent: 'center'}}>
                         <Modal animationType="slide" transparent={false} visible={this.state.modalVisible}
                             onRequestClose={() => {

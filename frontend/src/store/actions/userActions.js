@@ -24,7 +24,7 @@ export const userActions = {
 
 function login({email, password}) {
     return dispatch => {
-        dispatch(request(email));
+        dispatch(request({email, password}));
         userService.login({email, password}).then(
             user => dispatch({type : USER_LOGIN_SUCCESS, user}),
             error => dispatch({type : USER_LOGIN_FAILURE, user})

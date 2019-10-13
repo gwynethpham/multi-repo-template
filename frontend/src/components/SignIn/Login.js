@@ -10,7 +10,7 @@ class LogoTitle extends React.Component {
     return (
       <Image
         source={require('../../../assets/images/alert-firework.png')}
-        style={{ width: 40, height: 40, position: 'absolute', left : -50}}
+        style={{ width: 40, height: 40}}
       />
     );
   }
@@ -19,12 +19,13 @@ class LogoTitle extends React.Component {
 Login.navigationOptions =({ navigation, navigationOptions }) => {
 	// const {params} = navigation.state;
 	return{
-		headerTitle : <LogoTitle />,
+		headerLeft : <LogoTitle />,
 		// headerRight : (
 		// 	<Button onPress={navigation.getParam('increaseCount')}
 		// 	title = "+1"
 		// 	color = "red" />
 		// ),
+		headerTitle : 'Login App',
 		headerStyle: {
   			backgroundColor: navigationOptions.headerTintColor,
 		},
@@ -40,7 +41,7 @@ function Login(props) {
 	  const styles = StyleSheet.create({
 	    container: {
 	      justifyContent: 'center',
-	      // marginTop: 50,
+	      paddignTop: 100,
 	      // padding: 20,
 	      backgroundColor: '#ffffff',
 	    },
@@ -65,7 +66,7 @@ function Login(props) {
 	  	 	props.onHandleCheckLogin(data);
 	  	 	setEmail('');
 	  	 	setPassword('');
-	    	props.navigation.navigate('HomeLayout');
+	    	props.navigation.navigate('AuthLoading');
 	    }
 	    else alert('Please! Your enter userName or password')
 	 };
@@ -73,7 +74,9 @@ function Login(props) {
     return (
     	 <View style={styles.container}>
 	    	 <ImageBackground source={require('../../../assets/images/bg.png')} style={{width: '100%', height: '100%'}}>
+	    	 	<View style={{paddingTop : 250, padding: 20}}>
 			        <TextInput style={styles.textInput} placeholder="Email" maxLength={20} value={email} onChangeText={(e)=> setEmail(e)} />
+	    	 	
 				    <TextInput secureTextEntry={true}  style={styles.textInput}  placeholder="password" maxLength={20} value={password} onChangeText={(e)=> setPassword(e)} />
 				    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
 				    	 <Button full rounded primary style={{ marginTop: 10, width: 100 }} onPress={_signInAsync}>
@@ -82,6 +85,7 @@ function Login(props) {
 				         <Button full rounded primary style={{ marginTop: 10, width: 100 }} onPress={()=>props.navigation.navigate('Register')}>
 				            <Text style={{color : 'white', fontWeight: 'bold'}}>Register</Text>
 				        </Button>
+				    </View>
 				    </View>     
 	        </ImageBackground>
          </View>
