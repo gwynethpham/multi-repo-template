@@ -3,18 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="cbdd2bfa-177b-4242-97bb-fde17796dd5d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Modules/ChatScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Modules/ChatScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/db/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Modules/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Modules/HomeScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Modules/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Modules/SideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SignIn/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SignIn/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/module/layout/ChatScreen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/module/layout/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/module/layout/HomeScreen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/module/layout/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/module/layout/ProfileScreen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/module/layout/SideBar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/module/layout/TabButtonNavigator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/SignIn/AuthLoadingScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SignIn/AuthLoadingScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/TabButtonNavigator/HomeScreenRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TabButtonNavigator/HomeScreenRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/TabButtonNavigator/TabButtonNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TabButtonNavigator/TabButtonNavigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,14 +33,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/components/TabButtonNavigator" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -63,6 +61,26 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="npm.Api">
+    <configuration name="Api" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/backend/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="app" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/frontend/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.app" />
+      <item itemvalue="npm.Api" />
+    </list>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -76,7 +94,14 @@
       <workItem from="1569985079179" duration="7384000" />
       <workItem from="1570184515114" duration="2489000" />
       <workItem from="1570241412717" duration="6814000" />
-      <workItem from="1570591106562" duration="11718000" />
+      <workItem from="1570591106562" duration="12317000" />
+      <workItem from="1570938579237" duration="4425000" />
+      <workItem from="1571476355100" duration="8000" />
+      <workItem from="1571478711630" duration="752000" />
+      <workItem from="1571535123437" duration="1740000" />
+      <workItem from="1571541852380" duration="373000" />
+      <workItem from="1571750026460" duration="598000" />
+      <workItem from="1572012395834" duration="443000" />
     </task>
     <servers />
   </component>

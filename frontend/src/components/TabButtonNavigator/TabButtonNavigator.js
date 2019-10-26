@@ -5,11 +5,16 @@ import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import AppNavigator from './AppNavigator'
 import HomeScreenRouter from './HomeScreenRouter'
+import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
+import IconMaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import IconMaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import IconSimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
+import Wallet from '../Screen/WalletScreen'
 
 
 const HomeDefault= createAppContainer(HomeScreenRouter);
 const Settings = createAppContainer(AppNavigator);
-class HomeScreen extends React.Component {
+class AlarmScreen extends React.Component {
     render() {
         return (
             <HomeDefault />
@@ -17,7 +22,28 @@ class HomeScreen extends React.Component {
     }
 }
 
-class SettingsScreen extends React.Component {
+class WalletScreen extends React.Component {
+    render() {
+        return (
+            <Wallet />
+        );
+    }
+}
+class TransactionsScreen extends React.Component {
+    render() {
+        return (
+            <Settings />
+        );
+    }
+}
+class SecurityScreen extends React.Component {
+    render() {
+        return (
+            <Settings />
+        );
+    }
+}
+class MiningScreen extends React.Component {
     render() {
         return (
             <Settings />
@@ -25,68 +51,45 @@ class SettingsScreen extends React.Component {
     }
 }
 
-class IconWithBadge extends React.Component {
-    render() {
-        const { name, badgeCount, color, size } = this.props;
-        return (
-            <View style={{ width: 24, height: 24, margin: 5 }}>
-                <Ionicons name={name} size={size} color={color} />
-                {badgeCount > 0 && (
-                    <View
-                        style={{
-                            position: 'absolute',
-                            right: -6,
-                            top: -3,
-                            backgroundColor: 'red',
-                            borderRadius: 6,
-                            width: 12,
-                            height: 12,
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                        }}>
-                        <Text style={{ color: 'white', fontSize: 10, fontWeight: 'bold' }}>
-                            {badgeCount}
-                        </Text>
-                    </View>
-                )}
-            </View>
-        );
-    }
-}
-
-const HomeIconWithBadge = props => {
-    return <IconWithBadge {...props} badgeCount={3} />;
-};
-
-const getTabBarIcon = (navigation, focused, tintColor) => {
-    const { routeName } = navigation.state;
-    let IconComponent = Ionicons;
-    let iconName;
-    if (routeName === 'Home') {
-        iconName = `ios-information-circle${focused ? '' : '-outline'}`;
-        // We want to add badges to home tab icon
-        IconComponent = HomeIconWithBadge;
-    } else if (routeName === 'Settings') {
-        iconName = `ios-options${focused ? '' : '-outline'}`;
-    }
-
-    // You can return any component that you like here!
-    return <IconComponent name={iconName} size={25} color={tintColor} />;
-};
 const TabButtonNavigator = createBottomTabNavigator(
     {
-        Home: { screen: HomeScreen },
-        Settings: { screen: SettingsScreen },
+        "Dash Board": AlarmScreen,
+        "Wallet": WalletScreen,
+        "Transaction": TransactionsScreen,
+        'Security': SecurityScreen,
+        "Mining": MiningScreen,
     },
     {
+        headerMode: 'none',
         defaultNavigationOptions: ({ navigation }) => ({
-            tabBarIcon: ({ focused, tintColor }) =>
-                getTabBarIcon(navigation, focused, tintColor),
+            tabBarIcon: ({ focused, horizontal, tintColor }) => {
+                const { routeName } = navigation.state;
+                let iconName;
+                switch (routeName) {
+                    case "Dash Board":
+                        iconName = <IconFontAwesome name='home' size={25} color={tintColor} />;
+                        break;
+                    case "Wallet":
+                        iconName = <IconSimpleLineIcons name='wallet' size={25} color={tintColor} />;
+                        break;
+                    case "Transaction":
+                        iconName = <IconFontAwesome name='exchange' size={25} color={tintColor} />;
+                        break;
+                    case "Security":
+                        iconName = <IconMaterialIcons name='security' size={25} color={tintColor} />;
+                        break;
+                    case "Mining":
+                        iconName = <IconMaterialCommunityIcons name='coin' size={25} color={tintColor} />;
+                        break;
+                }
+                return iconName;
+            },
+            tabBarVisible: true,
         }),
         tabBarOptions: {
-            activeTintColor: 'tomato',
+            activeTintColor: '#AC0000',
             inactiveTintColor: 'gray',
         },
     }
-)
+);
 export default createAppContainer(TabButtonNavigator);

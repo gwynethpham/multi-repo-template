@@ -18,7 +18,7 @@ export default class HomeScreen extends Component {
                     </Left>
                     <Body>
                         <Button transparent onPress={()=> this.props.navigation.navigate('Home')} >
-                            <Title>HomeScreen</Title>
+                            <Title>Dash Board</Title>
                         </Button>
                     </Body>
                     <Right>
@@ -28,10 +28,11 @@ export default class HomeScreen extends Component {
                     </Right>
                 </Header>
                 <Content padder>
+
                     <Card>
                         <CardItem>
                             <Body>
-                                <Text>Chat App to talk some awesome people!</Text>
+                                <Text>WellCome BloodLand Wallet</Text>
                             </Body>
                         </CardItem>
                     </Card>

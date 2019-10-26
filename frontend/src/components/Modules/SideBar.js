@@ -3,9 +3,10 @@ import { AppRegistry, Image, StatusBar } from "react-native";
 import {Button,Text,Container,List,ListItem,Content,Icon} from "native-base";
 import { DrawerActions } from 'react-navigation-drawer';
 const routes = [
-    "Home",
-    "Chat",
-    "Profile"
+    "Alarm",
+    "Notification",
+    "Myaccount",
+    'Help'
 ];
 export default class SideBar extends Component {
     render() {

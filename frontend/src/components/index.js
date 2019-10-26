@@ -25,7 +25,7 @@ class AuthLoadingScreen extends React.Component {
   // Render any loading content that you like here
   render() {
     return (
-      <View style={{flexDirection: 'Column', position: 'absolute', top : '45%', left : '45%'}}>
+      <View style={{flex: 1,justifyContent: 'center'}}>
         <ActivityIndicator size="large" color="#0000ff" />
         <StatusBar barStyle="default" />
       </View>

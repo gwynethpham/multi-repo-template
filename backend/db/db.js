@@ -10,7 +10,7 @@ try {
        useFindAndModify: false,
        useUnifiedTopology: true
     })
-} catch (error) { }
+} catch (error) { throw error}
 
 // When successfully connected
 mongoose.connection.on('connected', function () {

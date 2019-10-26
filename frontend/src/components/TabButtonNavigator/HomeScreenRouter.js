@@ -7,9 +7,11 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
 
 const HomeScreenRouter = createDrawerNavigator(
     {
-        Home: { screen: HomeScreen },
-        Chat: { screen: MainScreenNavigator },
-        ProfileScreen: { screen: ProfileScreen }
+        Alarm: { screen: HomeScreen },
+        Notification: { screen: MainScreenNavigator },
+        Myaccount: { screen: ProfileScreen },
+        Help : { screen : ProfileScreen}
+
     },
     {
         contentComponent: props => <SideBar {...props} />
