@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import  {screenActions} from '../../store/actions/screenActions.js'
 import  {userActions} from '../../store/actions/userActions.js';
 import { Button } from "native-base";
+import {loginStyle} from '../../css/style'
 
 class LogoTitle extends React.Component {
   render() {
@@ -38,26 +39,26 @@ function Login(props) {
 	  const [password, setPassword] =useState('');
 	  const [email, setEmail] =useState('');
 
-	  const styles = StyleSheet.create({
-	    container: {
-	      justifyContent: 'center',
-	      paddignTop: 100,
-	      // padding: 20,
-	      backgroundColor: '#ffffff',
-	    },
-	    textInput : {
-	      backgroundColor : '#fff',
-	      padding: 10,
-	      marginTop: 10,
-	      color: 'red',
-	      borderRadius: 4,
-	      borderWidth: 0.5,
-	      borderColor: '#d6d7da',
-	    },
-	    btnSignUp : {
-	    	marginTop: 10
-	    }
-	  });
+	  // const styles = StyleSheet.create({
+	  //   container: {
+	  //     justifyContent: 'center',
+	  //     paddignTop: 100,
+	  //     // padding: 20,
+	  //     backgroundColor: '#ffffff',
+	  //   },
+	  //   textInput : {
+	  //     backgroundColor : '#fff',
+	  //     padding: 10,
+	  //     marginTop: 10,
+	  //     color: 'red',
+	  //     borderRadius: 4,
+	  //     borderWidth: 0.5,
+	  //     borderColor: '#d6d7da',
+	  //   },
+	  //   btnSignUp : {
+	  //   	marginTop: 10
+	  //   }
+	  // });
 
 	const _signInAsync = async () => {
 	    // await AsyncStorage.setItem('userToken', 'abc');
@@ -72,12 +73,12 @@ function Login(props) {
 	 };
  
     return (
-    	 <View style={styles.container}>
+    	 <View style={loginStyle.container}>
 	    	 <ImageBackground source={require('../../../assets/images/bg.png')} style={{width: '100%', height: '100%'}}>
 	    	 	<View style={{paddingTop : 250, padding: 20}}>
-			        <TextInput style={styles.textInput} placeholder="Email" maxLength={20} value={email} onChangeText={(e)=> setEmail(e)} />
+			        <TextInput style={loginStyle.textInput} placeholder="Email" maxLength={20} value={email} onChangeText={(e)=> setEmail(e)} />
 	    	 	
-				    <TextInput secureTextEntry={true}  style={styles.textInput}  placeholder="password" maxLength={20} value={password} onChangeText={(e)=> setPassword(e)} />
+				    <TextInput secureTextEntry={true}  style={loginStyle.textInput}  placeholder="password" maxLength={20} value={password} onChangeText={(e)=> setPassword(e)} />
 				    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
 				    	 <Button full rounded primary style={{ marginTop: 10, width: 100 }} onPress={_signInAsync}>
 				            <Text style={{color : 'white', fontWeight: 'bold'}}>Sign in</Text>
