@@ -1,5 +1,5 @@
 import React, {Component, Fragment, useState} from "react";
-import {Alert, TouchableHighlight, View,Image,TouchableOpacity} from "react-native";
+import {Alert, TouchableHighlight, View,Image,TouchableOpacity ,TextInput} from "react-native";
 import { Button, Text, Container, Card, CardItem, Body, Content, Header, Title, Left, Icon, Right, H1, H2, H3 } from "native-base";
 import { DrawerActions } from 'react-navigation-drawer';
 import Modal from "react-native-modal";
@@ -14,8 +14,12 @@ const HomeScreen = (props) => {
     const {navigate,dispatch} = props.navigation;
     const [modalVisible, setModalVisible] = useState(false);
     const [toggleBtnMessage, setToggleBtnMessage] = useState(false);
+    const [message , setMessage ] =useState('');
     const _onHandleToggleBtn = () => {
         setToggleBtnMessage(!toggleBtnMessage)
+    };
+    const _onHandleMessage = () => {
+        console.log('message', message) ;
     }
         return (
             <Container>
@@ -65,7 +69,6 @@ const HomeScreen = (props) => {
                             <Text><H1 style={{color : 'red',fontWeight: 'bold'}}>1.000</H1> <Text >Blood</Text></Text>
                         </View>
                     </View>
-
                     <View style={{flexDirection: 'row', justifyContent: 'center' ,marginTop: 10}}>
                         <View style={{ flexDirection : 'row',justifyContent: 'center',alignItems: 'center',backgroundColor: 'red', borderColor: '#ddd', width: 180, height : 70,borderWidth: 1, padding: 15, margin: 10, borderRadius : 10}}>
                              <Image square source={airplane} resizeMode={'contain'} style={{width: 50, height: 50}} />
@@ -78,7 +81,6 @@ const HomeScreen = (props) => {
                             <Text style={{color : 'white',marginLeft : 5}}>내용을</Text>
                         </View>
                     </View>
-
                     <View style={{position : 'absolute', bottom: -100, left: 350}}>
                         {toggleBtnMessage && <View style={{borderColor: "#ddd", borderWidth:1, borderRadius : 10,
                             backgroundColor : 'white', padding: 15, position : 'relative', right:12, zIndex: 9}}>
@@ -99,7 +101,6 @@ const HomeScreen = (props) => {
                             <Image source={!toggleBtnMessage ? iconCloseMessage : iconOpenMessage} />
                         </TouchableOpacity>
                     </View>
-
                     <Modal isVisible={modalVisible}>
                         <Container>
                             <Header style={{backgroundColor : 'red'}}>
@@ -114,6 +115,15 @@ const HomeScreen = (props) => {
                                     </Button>
                                 </Right>
                             </Header>
+                            <View style={{flex : 1, flexDirection: 'row', position: 'absolute', bottom : 0}}>
+                            <TextInput style={{border: '#ddd', borderWidth : 1, borderRadius: 5,position: 'absolute', bottom : 0}}
+                                       value={message}
+                                       placeholder="Type here to translate!"
+                                       onChangeText={(text) => setMessage(text)}/>
+                            <Button onPress={_onHandleMessage} style={{position: 'absolute', bottom : 0}}>
+                                <Text>submit</Text>
+                            </Button>
+                        </View>
                         </Container>
                     </Modal>
 
