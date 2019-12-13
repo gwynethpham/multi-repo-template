@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cbdd2bfa-177b-4242-97bb-fde17796dd5d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/db/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Modules/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Modules/HomeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Modules/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Modules/SideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SignIn/AuthLoadingScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SignIn/AuthLoadingScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TabButtonNavigator/HomeScreenRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TabButtonNavigator/HomeScreenRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TabButtonNavigator/TabButtonNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TabButtonNavigator/TabButtonNavigator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +24,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -61,7 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.Api">
+  <component name="RunManager" selected="npm.app">
     <configuration name="Api" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/backend/package.json" />
       <command value="start" />
@@ -102,6 +95,12 @@
       <workItem from="1571541852380" duration="373000" />
       <workItem from="1571750026460" duration="598000" />
       <workItem from="1572012395834" duration="443000" />
+      <workItem from="1572747384135" duration="11087000" />
+      <workItem from="1572778748303" duration="825000" />
+      <workItem from="1572788159553" duration="4448000" />
+      <workItem from="1572963170597" duration="3198000" />
+      <workItem from="1573934821196" duration="82000" />
+      <workItem from="1574954518299" duration="88000" />
     </task>
     <servers />
   </component>
@@ -120,6 +119,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
