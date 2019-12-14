@@ -9,13 +9,17 @@ const server = http.createServer(app);
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-const config = require('./db/config');
 const dotenv = require('dotenv');
 dotenv.config();
+const config = require('./db/config');
 // const jwt = require('helpers/jwt');
 const errorHandler = require('helpers/error-handler');
 const logger = require('morgan');
 const morganHelper = require('./helpers/morganHelper');
+// socket IO
+
+const io = require('socket.io')(server);
+require('./helpers/socketIo')(io);
 
 logger.token('customMethod', morganHelper.customMethod);
 logger.token('timeFormat', morganHelper.timeFormat);
