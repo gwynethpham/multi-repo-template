@@ -34,16 +34,16 @@ const homeScreenStyle = StyleSheet.create({
 		justifyContent: 'center',
 		alignContent : 'center',
 		margin: '0 auto',
-		headerLeft : {
-			color : 'white',
-			backgroundColor: 'white',
-			justifyContent: 'center',
-		},
-		headerBody: {
-			color : 'white',
-			fontWeight: 'bold',
-
-		}
+//		headerLeft : {
+//			color : 'white',
+//			backgroundColor: 'white',
+//			justifyContent: 'center',
+//		},
+//		headerBody: {
+//			color : 'white',
+//			fontWeight: 'bold',
+//
+//		}
 
 	},
 

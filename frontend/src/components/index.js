@@ -52,9 +52,9 @@ const AuthStack = createStackNavigator(
 );
 const SwitchNavigator =  createSwitchNavigator(
     {
-      // AuthLoading: AuthLoadingScreen,
+      AuthLoading: AuthLoadingScreen,
       HomeLayout: TabButtonNavigator,
-      // Auth: AuthStack,
+      Auth: AuthStack,
     },
     {
       initialRouteName: 'HomeLayout',

@@ -116,7 +116,7 @@ const HomeScreen = (props) => {
                                 </Right>
                             </Header>
                             <View style={{flex : 1, flexDirection: 'row', position: 'absolute', bottom : 0}}>
-                            <TextInput style={{border: '#ddd', borderWidth : 1, borderRadius: 5,position: 'absolute', bottom : 0}}
+                            <TextInput style={{borderColor: '#ddd', borderWidth : 1, borderRadius: 5,position: 'absolute', bottom : 0}}
                                        value={message}
                                        placeholder="Type here to translate!"
                                        onChangeText={(text) => setMessage(text)}/>
